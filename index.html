@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferramentas de IA que eu uso</title>
+<meta name="description" content="As ferramentas de inteligência artificial que eu uso pra criar vídeos, vozes e sites.">
+<meta property="og:title" content="Ferramentas de IA que eu uso">
+<meta property="og:description" content="Vozes, vídeos e sites com IA — os links das ferramentas que eu uso.">
+<meta name="theme-color" content="#0d0d12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0d12; --card:#16161d; --line:#26262f; --text:#f4f4f6; --muted:#9a9aa8;
+    --accent:#c6ff3d; --accent-ink:#0d0d12;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);
+    min-height:100vh;display:flex;justify-content:center;
+    background-image:radial-gradient(600px 300px at 50% -80px,rgba(198,255,61,.14),transparent 70%);
+  }
+  main{width:100%;max-width:480px;padding:48px 20px 40px}
+  header{text-align:center;margin-bottom:32px}
+  .badge{
+    width:72px;height:72px;margin:0 auto 18px;border-radius:22px;background:var(--accent);
+    color:var(--accent-ink);display:grid;place-items:center;font:700 34px/1 'Space Grotesk',sans-serif;
+    transform:rotate(-6deg);box-shadow:0 10px 40px rgba(198,255,61,.25);
+  }
+  h1{font:700 28px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em}
+  header p{color:var(--muted);margin-top:10px;font-size:15px;line-height:1.5}
+  .label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:28px 4px 12px}
+  .tool{
+    display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);
+    border-radius:18px;padding:18px 18px 16px;margin-bottom:12px;transition:transform .15s,border-color .15s;
+  }
+  .tool:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .tool:active{transform:scale(.99)}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .name{font:700 19px/1.2 'Space Grotesk',sans-serif}
+  .tag{font-size:12px;font-weight:600;color:var(--accent);background:rgba(198,255,61,.1);padding:4px 10px;border-radius:99px;white-space:nowrap}
+  .desc{color:var(--muted);font-size:14.5px;line-height:1.5;margin-top:8px}
+  .cta{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:600;font-size:14px;color:var(--accent)}
+  .socials{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .social{
+    display:block;text-decoration:none;color:var(--text);background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:14px;font-weight:600;font-size:14px;text-align:center;transition:border-color .15s;
+  }
+  .social:hover{border-color:var(--accent)}
+  .social small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:3px}
+  footer{color:var(--muted);font-size:12.5px;line-height:1.55;text-align:center;margin-top:32px;padding-top:20px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="badge">IA</div>
+    <h1>Ferramentas de IA que eu uso</h1>
+    <p>Vozes, vídeos e sites feitos com inteligência artificial. Toca na ferramenta pra testar.</p>
+  </header>
+
+  <div class="label">Ferramentas</div>
+  <div id="tools"></div>
+
+  <div class="label">Meus perfis</div>
+  <div class="socials">
+    <a class="social" href="https://www.instagram.com/vamosdesmontei" target="_blank" rel="noopener">Vamos Desmontei<small>Instagram</small></a>
+    <a class="social" href="https://www.instagram.com/vamostecontei" target="_blank" rel="noopener">Vamos Te Contei<small>Instagram</small></a>
+    <a class="social" href="https://www.instagram.com/vesgoviraliza" target="_blank" rel="noopener">Vesgo Viraliza<small>Instagram</small></a>
+    <a class="social" href="https://www.tiktok.com/@vesgoviraliza" target="_blank" rel="noopener">Vesgo Viraliza<small>TikTok</small></a>
+  </div>
+
+  <footer>Alguns links desta página são de afiliado: se você assinar por eles, eu recebo uma comissão, sem nenhum custo extra pra você.</footer>
+</main>
+
+<script>
+  // Para adicionar uma ferramenta aprovada: preencha "link" e mude "ativo" para true.
+  const ferramentas = [
+    { nome:"ElevenLabs", tag:"Voz com IA", ativo:true,
+      desc:"Narração, dublagem e clonagem de voz com IA em português, com vozes muito realistas. Tem plano grátis pra testar.",
+      link:"https://try.elevenlabs.io/ng40skimp4oz" },
+    { nome:"InVideo", tag:"Vídeo com IA", ativo:false,
+      desc:"Cria vídeos completos a partir de um texto: roteiro, cenas, legendas e narração.", link:"" },
+    { nome:"AI Studios", tag:"Avatar com IA", ativo:false,
+      desc:"Vídeos com apresentador virtual (avatar) falando o seu texto, sem precisar gravar.", link:"" },
+    { nome:"Hostinger", tag:"Site e hospedagem", ativo:false,
+      desc:"Hospedagem e criador de sites com IA pra colocar seu negócio na internet.", link:"" }
+  ];
+  const box = document.getElementById("tools");
+  ferramentas.filter(f => f.ativo && f.link).forEach(f => {
+    const a = document.createElement("a");
+    a.className = "tool"; a.href = f.link; a.target = "_blank"; a.rel = "noopener sponsored";
+    a.innerHTML = `<div class="top"><span class="name"></span><span class="tag"></span></div><p class="desc"></p><span class="cta">Testar grátis →</span>`;
+    a.querySelector(".name").textContent = f.nome;
+    a.querySelector(".tag").textContent = f.tag;
+    a.querySelector(".desc").textContent = f.desc;
+    box.appendChild(a);
+  });
+</script>
+</body>
+</html>
